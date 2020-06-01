@@ -19,7 +19,7 @@ build/src/input.o: src/input.cpp
 	clang-format -i src/input.cpp
 	g++ -Wall -Werror -I src -c src/input.cpp -o build/src/input.o
 
-format: src/input.cpp src/input.h src/menu.cpp src/menu.h src/main.cpp src/randomizer.cpp src/randomizer.h
+format: src/input.cpp src/input.hpp src/menu.cpp src/menu.hpp src/main.cpp src/randomizer.cpp src/randomizer.hpp
 	clang-format -i src/input.cpp src/menu.cpp src/main.cpp src/randomizer.cpp
 
 

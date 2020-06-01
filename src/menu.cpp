@@ -19,16 +19,16 @@ void Menu()
     while (variant == -1) {
         PrintMenu();
         std::cin >> variant;
-        if(variant == 1){
-            system("cls");
-	    break;
-        }
-        else if(variant == 0){
-	    system("cls");
+
+        if (variant == 1) {
+            system("clear");
+            break;
+        } else if (variant == 0) {
+            system("clear");
             exit(EXIT_SUCCESS);
         } else {
             variant = -1;
         }
-    system("cls");
+        system("clear");
     }
 }

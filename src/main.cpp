@@ -1,5 +1,5 @@
 #include "input.hpp"
-#include "menu.h"
+#include "menu.hpp"
 #include "randomizer.hpp"
 #include <ctime>
 #include <iostream>
