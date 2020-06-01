@@ -2,5 +2,5 @@
 
 void input(int& number)
 {
-	std::cin >> number;
+    std::cin >> number;
 }
