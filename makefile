@@ -1,7 +1,23 @@
 all:bin/BaC
 
-bin/BaC: build/src/main.o 
-	g++ -Wall -Werror build/src/main.o  -o bin/BaC
+bin/BaC: build/src/main.o build/src/menu.o build/src/randomizer.o build/src/input.o 
+	g++ -Wall -Werror build/src/main.o build/src/menu.o build/src/randomizer.o build/src/input.o  -o bin/BaC
 
-build/src/printF.o: src/printF.c
-	gcc -Wall -Werror -I src -c src/printF.c -o build/src/printF.o
+build/src/main.o: src/main.cpp
+	g++ -Wall -Werror -I src -c src/main.cpp -o build/src/main.o
+
+build/src/menu.o: src/menu.cpp
+	g++ -Wall -Werror -I src -c src/menu.cpp -o build/src/menu.o
+	
+build/src/randomizer.o: src/randomizer.cpp
+	g++ -Wall -Werror -I src -c src/randomizer.cpp -o build/src/randomizer.o
+	
+build/src/input.o: src/input.cpp
+	g++ -Wall -Werror -I src -c src/input.cpp -o build/src/input.o
+
+format: src/input.cpp src/input.h src/menu.cpp src/menu.h src/main.cpp src/randomizer.cpp src/randomizer.h
+	clang-format -i src/input.cpp src/menu.cpp src/main.cpp src/randomizer.cpp
+
+
+clean:
+	rm -rf build/src/*.o build/test/*.o bin/BaC 
