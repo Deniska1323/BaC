@@ -1,3 +1,5 @@
+.PHONY: all format clean run test
+
 all:bin/BaC
 
 bin/BaC: build/src/main.o build/src/menu.o build/src/randomizer.o build/src/input.o 
