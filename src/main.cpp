@@ -10,7 +10,7 @@ using namespace std;
 int main()
 {
     setlocale(LC_ALL, "rus");
-    srand(time(0));
+    srand(time(NULL));
 
     Menu();
     logic();
