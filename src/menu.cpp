@@ -1,6 +1,8 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
+#include <cstlib>
+#include <cstdio>
 #include <string.h>
 
 void PrintMenu()

@@ -1,6 +1,8 @@
 #include "ncurses.h"
 #include "sstream"
 #include <iostream>
+#include <cstlib>
+#include <cstdio>
 
 void input(int& number)
 {

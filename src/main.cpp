@@ -3,6 +3,8 @@
 #include "menu.hpp"
 #include "randomizer.hpp"
 #include <time.h>
+#include <cstlib>
+#include <cstdio>
 #include <iostream>
 
 using namespace std;
