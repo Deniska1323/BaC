@@ -2,8 +2,8 @@
 
 all:bin/BaC
 
-bin/BaC: build/src/main.o build/src/menu.o build/src/randomizer.o build/src/input.o 
-	g++ -Wall -Werror build/src/main.o build/src/menu.o build/src/randomizer.o build/src/input.o  -o bin/BaC
+bin/BaC: build/src/main.o build/src/menu.o build/src/randomizer.o build/src/input.o build/src/logic.o
+	g++ -Wall -Werror build/src/main.o build/src/menu.o build/src/randomizer.o build/src/input.o build/src/logic.o -o bin/BaC
 
 build/src/main.o: src/main.cpp 
 	clang-format -i src/main.cpp
@@ -21,9 +21,12 @@ build/src/input.o: src/input.cpp
 	clang-format -i src/input.cpp
 	g++ -Wall -Werror -I src -c src/input.cpp -o build/src/input.o
 
+build/src/logic.o: src/logic.cpp
+	clang-format -i src/logic.cpp
+	g++ -Wall -Werror -I src -c src/logic.cpp -o build/src/logic.o
+
 format: src/input.cpp src/input.hpp src/menu.cpp src/menu.hpp src/main.cpp src/randomizer.cpp src/randomizer.hpp
 	clang-format -i src/input.cpp src/menu.cpp src/main.cpp src/randomizer.cpp
 
-
 clean:
-	rm -rf build/src/*.o build/test/*.o bin/BaC 
+	rm -rf build/src/*.o build/test/*.o bin/BaC

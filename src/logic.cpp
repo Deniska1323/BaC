@@ -1,3 +1,4 @@
+#include "logic.hpp"
 #include "input.hpp"
 #include "randomizer.hpp"
 
