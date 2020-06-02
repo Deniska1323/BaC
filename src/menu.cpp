@@ -20,14 +20,14 @@ void Menu()
         std::cin >> variant;
 
         if (variant == 1) {
-            system("cls");
+            system("clear");
             break;
         } else if (variant == 0) {
-            system("cls");
+            system("clear");
             exit(EXIT_SUCCESS);
         } else {
             variant = -1;
         }
-        system("cls");
+        system("clear");
     }
 }

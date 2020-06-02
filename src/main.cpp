@@ -5,8 +5,6 @@
 #include <ctime>
 #include <iostream>
 
-#define cls system("cls")
-
 using namespace std;
 
 int main()

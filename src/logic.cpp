@@ -1,7 +1,7 @@
 #include "logic.hpp"
 #include "input.hpp"
+#include "ncurses.h"
 #include "randomizer.hpp"
-
 #include <iostream>
 
 using namespace std;
@@ -10,7 +10,12 @@ void logic()
 {
     //	number - our number, answer - key number, ran[4] - random 4-digit
     // number, tries - attempts to give answer
-    int number, digit, ran[4], answer[4], bull, cow, tries;
+    int number, digit, ran[4], answer[4], bull, cow, tries, y = 4, x = 0;
+
+    initscr();
+    keypad(stdscr, TRUE);
+    noecho();
+    curs_set(0);
 
     bool f = 0;
 
@@ -20,11 +25,20 @@ void logic()
         while (1) {
             bull = 0;
             cow = 0;
-            cout << tries + 1 << " - ";
+            // move(4, 1);
+            // printw("%i - ", tries + 1);
+            // cout << tries + 1 << " - ";
             tries++;
 
-            std::cout << "Enter your number\n"; //	0 -> Show answer
+            // std::cout << "Enter your number\n"; //	0 -> Show answer
             input(number);
+            if (tries % 5 == 0) {
+                y = 4;
+                x += 13;
+            }
+            y += 2;
+            move(2 + y, 1 + x);
+            printw("%i", number);
 
             if (number == 0)
                 break;
@@ -53,7 +67,12 @@ void logic()
             }
 
             cow -= bull;
-            std::cout << bull << "b " << cow << "c" << endl << endl;
+            move(3 + y, 1 + x);
+            printw("%i - ", tries);
+            move(3 + y, 6 + x);
+            printw("%ib %ic", bull, cow);
+
+            // std::cout << bull << "b " << cow << "c" << endl << endl;
             if (bull == 4) {
                 cout << "You win ";
                 break;
@@ -70,11 +89,11 @@ void logic()
         std::cout << endl << "\nRestart game? 1-yes 0 - no" << endl;
         cin >> f;
         if (f == 0) {
-            system("cls");
+            clear();
             cout << "Thanks for game!\n\n";
-            exit(0);
+            exit(EXIT_SUCCESS);
         }
-        system("cls");
+        clear();
         f = 0;
     }
 }
