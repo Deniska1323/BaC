@@ -2,7 +2,6 @@
 #include "input.hpp"
 #include "ncurses.h"
 #include "randomizer.hpp"
-#include <cstlib>
 #include <cstdio>
 #include <iostream>
 

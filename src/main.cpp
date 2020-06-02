@@ -2,10 +2,9 @@
 #include "logic.hpp"
 #include "menu.hpp"
 #include "randomizer.hpp"
-#include <time.h>
-#include <cstlib>
 #include <cstdio>
 #include <iostream>
+#include <time.h>
 
 using namespace std;
 
