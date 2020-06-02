@@ -1,4 +1,5 @@
 #pragma once
+
 #ifndef RANDOMIZER_HPP
 #define RANDOMIZER_HPP
 
