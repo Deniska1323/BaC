@@ -3,6 +3,7 @@
 #include "randomizer.hpp"
 #include <ctime>
 #include <iostream>
+#include <stdlib.h>
 using namespace std;
 
 int main()
