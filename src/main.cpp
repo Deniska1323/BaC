@@ -4,6 +4,8 @@
 #include "randomizer.hpp"
 #include <iostream>
 #include <time.h>
+#include <cstdlib>
+#include <cstdio>
 
 using namespace std;
 
