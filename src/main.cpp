@@ -2,17 +2,17 @@
 #include "logic.hpp"
 #include "menu.hpp"
 #include "randomizer.hpp"
-#include <ctime>
 #include <iostream>
-
-#define cls system("cls")
+#include <time.h>
+#include <cstdlib>
+#include <cstdio>
 
 using namespace std;
 
 int main()
 {
     setlocale(LC_ALL, "rus");
-    srand(time(0));
+    srand(time(NULL));
 
     Menu();
     logic();

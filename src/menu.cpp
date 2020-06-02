@@ -1,7 +1,10 @@
+
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <cstdlib>
+#include <cstdio>
 
 void PrintMenu()
 {
@@ -20,14 +23,14 @@ void Menu()
         std::cin >> variant;
 
         if (variant == 1) {
-            system("cls");
+            system("clear");
             break;
         } else if (variant == 0) {
-            system("cls");
+            system("clear");
             exit(EXIT_SUCCESS);
         } else {
             variant = -1;
         }
-        system("cls");
+        system("clear");
     }
 }
