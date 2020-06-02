@@ -2,7 +2,6 @@
 #include "logic.hpp"
 #include "menu.hpp"
 #include "randomizer.hpp"
-#include <cstdio>
 #include <iostream>
 #include <time.h>
 
