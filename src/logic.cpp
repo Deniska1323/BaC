@@ -14,11 +14,6 @@ void logic()
     // number, tries - attempts to give answer
     int number, digit, ran[4], answer[4], bull, cow, tries, y = 4, x = 0;
 
-    initscr();
-    keypad(stdscr, TRUE);
-    noecho();
-    curs_set(0);
-
     bool f = 0;
 
     while (1) {
