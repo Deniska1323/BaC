@@ -28,5 +28,8 @@ build/src/logic.o: src/logic.cpp
 format: src/input.cpp src/input.hpp src/menu.cpp src/menu.hpp src/main.cpp src/randomizer.cpp src/randomizer.hpp
 	clang-format -i src/input.cpp src/menu.cpp src/main.cpp src/randomizer.cpp
 
+run:
+	bin/BaC
+
 clean:
 	rm -rf build/src/*.o build/test/*.o bin/BaC
