@@ -1,14 +1,14 @@
+#include "incorrect_input.hpp"
 #include "ncurses.h"
 #include "sstream"
-#include <iostream>
-#include <cstdlib>
 #include <cstdio>
+#include <cstdlib>
+#include <iostream>
 
 void input(int& number)
 {
-    int key, size = 0;
+    int key, size = 0, test_flag;
     char num[255];
-    std::stringstream ss;
     num[0] = '\0';
     move(0, 1);
     printw("Enter your number");
@@ -46,7 +46,6 @@ void input(int& number)
         }
         refresh();
     }
-    ss << num;
-    ss >> number;
-    endwin();
+
+    number = incorrect_input(num, &test_flag);
 }

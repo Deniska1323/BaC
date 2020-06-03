@@ -1,8 +1,6 @@
 #include <cstdio>
 #include <cstdlib>
 #include <iostream>
-#include <cstdlib>
-#include <cstdio>
 
 void Randomizer(int* arr) //	Creates guessed number
 {
