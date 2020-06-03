@@ -1,15 +1,17 @@
-#include "menu.hpp"
+
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <cstdlib>
+#include <cstdio>
 
 void PrintMenu()
 {
-    std::cout << "Выберите вариант\n\n\n";
-    std::cout << "1. New game\n\n"
+    std::cout << "Choose:\n\n";
+    std::cout << "1. New game\n"
               << "0. Exit\n\n";
-    std::cout << ">>> ";
+    std::cout << "> ";
 }
 
 void Menu()
