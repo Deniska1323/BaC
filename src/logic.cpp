@@ -14,7 +14,7 @@ void logic()
     // number, tries - attempts to give answer
     int number, digit, ran[4], answer[4], bull, cow, tries, y = 4, x = 0;
 
-    bool f = 0;
+    char f = '0';
 
     while (1) {
         Randomizer(ran);
@@ -71,26 +71,35 @@ void logic()
 
             // std::cout << bull << "b " << cow << "c" << endl << endl;
             if (bull == 4) {
-                cout << "You win ";
                 break;
             }
         }
 
         //	Outputs answer
-        cout << "\nAnswer is ";
+        clear();
+        if (bull == 4) {
+            move(0, 1);
+            printw("You win!");
+        }
+        move(1, 1);
+        printw("Answer is");
         for (int i = 0; i < 4; i++) {
-            cout << ran[i];
+            move(2, 1 + i);
+            printw("%i", ran[i]);
         }
 
         //	Restart menu
-        std::cout << endl << "\nRestart game? 1-yes 0 - no" << endl;
-        cin >> f;
-        if (f == 0) {
+        move(4, 1);
+        printw("Restart game? 1 - yes 0 - no");
+
+        f = getch();
+        if (f == '0') {
             clear();
-            cout << "Thanks for game!\n\n";
+            printw("Thanks for game!");
             exit(EXIT_SUCCESS);
+            endwin();
         }
         clear();
-        f = 0;
+        f = '0';
     }
 }
