@@ -1,4 +1,4 @@
-#include "incorrect_input.hpp"
+
 #include <cstdio>
 #include <cstdlib>
 #include <iostream>

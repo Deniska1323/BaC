@@ -1,4 +1,5 @@
 
+#include "ncurses.h"
 #include <cstdio>
 #include <cstdlib>
 #include <iostream>
@@ -8,28 +9,32 @@
 
 void PrintMenu()
 {
-    std::cout << "Choose:\n\n";
-    std::cout << "1. New game\n"
-              << "0. Exit\n\n";
-    std::cout << "> ";
+    move(1, 2);
+    printw("Choose:");
+    move(3, 1);
+    printw("1. New game");
+    move(4, 1);
+    printw("0.   Exit");
+    refresh();
 }
 
 void Menu()
 {
-    int variant = -1;
+    char variant = '3';
 
-    while (variant == -1) {
+    while (variant == '3') {
         PrintMenu();
-        std::cin >> variant;
+        variant = getch();
 
-        if (variant == 1) {
+        if (variant == '1') {
             system("clear");
             break;
-        } else if (variant == 0) {
+        } else if (variant == '0') {
             system("clear");
             exit(EXIT_SUCCESS);
+            endwin();
         } else {
-            variant = -1;
+            variant = '3';
         }
         system("clear");
     }
