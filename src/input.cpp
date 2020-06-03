@@ -25,7 +25,7 @@ void input(int& number)
         case KEY_BACKSPACE: {
             if (size >= 0) {
                 num[size] = '\0';
-                move(2, 1 + size);
+                move(2, size);
                 if (size != 0) {
                     printw(" ");
                     size--;
