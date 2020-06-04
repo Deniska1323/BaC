@@ -41,6 +41,9 @@ format: src/input.cpp src/input.hpp src/menu.cpp src/menu.hpp src/main.cpp src/r
 run:
 	bin/BaC
 
+test_run:
+	bin/testing
+
 clean:
 	rm -rf build/src/*.o build/test/*.o bin/BaC
 
