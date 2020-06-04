@@ -3,3 +3,5 @@ language: ruby
 compiler: g++
 
 script: make
+	make run
+	make test
