@@ -1,4 +1,4 @@
-.PHONY: all format clean run test
+.PHONY: all format clean run test install
 
 all:bin/BaC    bin/testing
 
@@ -8,7 +8,12 @@ bin/BaC: build/src/main.o build/src/menu.o build/src/randomizer.o build/src/inpu
 bin/testing:  build/test/testing.o build/src/menu.o build/src/randomizer.o build/src/input.o build/src/logic.o build/src/incorrect_input.o
 	g++ -Wall -Werror build/test/testing.o build/src/menu.o build/src/randomizer.o build/src/input.o build/src/logic.o build/src/incorrect_input.o -o bin/testing  -lncurses  
 
+<<<<<<< HEAD
 build/test/testing.o: test/testing.cpp thirdparty/catch.hpp 
+=======
+build/test/testing.o: test/testing.cpp thirdparty/catch.h 
+	clang-format -i test/testing.cpp
+>>>>>>> iss11
 	g++ -I thirdparty -I src -c test/testing.cpp -o build/test/testing.o
 
 build/src/main.o: src/main.cpp 
@@ -35,8 +40,7 @@ build/src/logic.o: src/logic.cpp
 	clang-format -i src/logic.cpp
 	g++ -Wall -Werror -I src -c src/logic.cpp -o build/src/logic.o -lncurses
 
-format: src/input.cpp src/input.hpp src/menu.cpp src/menu.hpp src/main.cpp src/randomizer.cpp src/randomizer.hpp src/incorrect_input.cpp src/incorrect_input.hpp
-	clang-format -i src/input.cpp src/menu.cpp src/main.cpp src/randomizer.cpp src/incorrect_input.cpp
+format: src/input.cpp src/input.hpp src/menu.cpp src/menu.hpp src/main.cpp src/randomizer.cpp src/randomizer.hpp src/incorrect_input.cpp src/incorrect_input.hpp test/testing.cpp
 
 run:
 	bin/BaC
