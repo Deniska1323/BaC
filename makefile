@@ -8,7 +8,7 @@ bin/BaC: build/src/main.o build/src/menu.o build/src/randomizer.o build/src/inpu
 bin/testing:  build/test/testing.o build/src/menu.o build/src/randomizer.o build/src/input.o build/src/logic.o build/src/incorrect_input.o
 	g++ -Wall -Werror build/test/testing.o build/src/menu.o build/src/randomizer.o build/src/input.o build/src/logic.o build/src/incorrect_input.o -o bin/testing  -lncurses  
 
-build/test/testing.o: test/testing.cpp thirdparty/catch.h 
+build/test/testing.o: test/testing.cpp thirdparty/catch.hpp 
 	g++ -I thirdparty -I src -c test/testing.cpp -o build/test/testing.o
 
 build/src/main.o: src/main.cpp 
