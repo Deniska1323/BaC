@@ -10,9 +10,10 @@ bin/BaC: build/src/main.o build/src/menu.o build/src/randomizer.o build/src/inpu
 bin/testing:  build/test/testing.o build/src/menu.o build/src/randomizer.o build/src/input.o build/src/logic.o build/src/incorrect_input.o
 	g++ -Wall -Werror build/test/testing.o build/src/menu.o build/src/randomizer.o build/src/input.o build/src/logic.o build/src/incorrect_input.o -o bin/testing  -lncurses  
 
-build/test/testing.o: test/testing.cpp thirdparty/catch.h 
+build/test/testing.o: test/testing.cpp thirdparty/catch.hpp 
 	clang-format -i test/testing.cpp
 	g++ -I thirdparty -I src -c test/testing.cpp -o build/test/testing.o $(FLAGS)
+
 
 build/src/main.o: src/main.cpp 
 	clang-format -i src/main.cpp
@@ -42,8 +43,10 @@ format: src/input.cpp src/input.hpp src/menu.cpp src/menu.hpp src/main.cpp src/r
 
 run:
 	bin/BaC
-test:
+
+test_run:
 	bin/testing
+
 clean:
 	rm -rf build/src/*.o build/test/*.o bin/BaC
 
