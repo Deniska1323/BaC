@@ -45,7 +45,7 @@ run:
 	bin/BaC
 
 test_run:
-	bin/testing
+	 bin/testing
 
 clean:
 	rm -rf build/src/*.o build/test/*.o bin/BaC

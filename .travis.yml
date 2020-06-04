@@ -4,4 +4,4 @@ compiler: g++
 
 script: 	
     -make
-    -make test
+    -make test_run
