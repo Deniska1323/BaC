@@ -4,7 +4,7 @@
 #include "../src/logic.hpp"
 #include "../src/menu.hpp"
 #include "../src/randomizer.hpp"
-#include "../thirdparty/catch.h"
+#include "../thirdparty/catch.hpp"
 
 TEST_CASE("Testing randomizer function", "[rand]")
 {
