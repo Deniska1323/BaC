@@ -3,5 +3,4 @@ language: c++
 compiler: g++
 
 script: 	
-    -make
-    -make test_run
+  - make && make test_run
