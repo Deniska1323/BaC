@@ -10,17 +10,10 @@ bin/BaC: build/src/main.o build/src/menu.o build/src/randomizer.o build/src/inpu
 bin/testing:  build/test/testing.o build/src/menu.o build/src/randomizer.o build/src/input.o build/src/logic.o build/src/incorrect_input.o
 	g++ -Wall -Werror build/test/testing.o build/src/menu.o build/src/randomizer.o build/src/input.o build/src/logic.o build/src/incorrect_input.o -o bin/testing  -lncurses  
 
-<<<<<<< HEAD
 build/test/testing.o: test/testing.cpp thirdparty/catch.hpp 
-=======
-build/test/testing.o: test/testing.cpp thirdparty/catch.h 
 	clang-format -i test/testing.cpp
-<<<<<<< HEAD
->>>>>>> iss11
-	g++ -I thirdparty -I src -c test/testing.cpp -o build/test/testing.o
-=======
 	g++ -I thirdparty -I src -c test/testing.cpp -o build/test/testing.o $(FLAGS)
->>>>>>> iss11
+
 
 build/src/main.o: src/main.cpp 
 	clang-format -i src/main.cpp
