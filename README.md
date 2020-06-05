@@ -7,6 +7,12 @@ The project is a logical game with a convenient and simple interface in which yo
 More in https://github.com/Deniska1323/BaC/wiki
 # How to play?
 You must enter the following in the terminal:
-1) $ git clone https://github.com/Deniska1323/BaC.git && cd BaC/ && make install && make all && make run
+1) $ git clone https://github.com/Deniska1323/BaC.git && cd BaC/ && make install && make all && make run.
 2) Play =)
-
+# How to exit?
+When you touch 0 in game you can't see, what are you writting at the moment in concole.You must after touch 0 write reset ant touch "Enter".
+Concore restart and you can working normal.
+#Additional option
+You have option:
+"make clean" - clean all artifact build, file BaC and testing.
+"make test_run" - you open test and can see how many test was passed.
