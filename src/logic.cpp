@@ -12,7 +12,7 @@ void logic()
 {
     //	number - our number, answer - key number, ran[4] - random 4-digit
     // number, tries - attempts to give answer
-    int number, digit, ran[4], answer[4], bull, cow, tries, y = 4, x = 0;
+    int number, digit, ran[4], answer[4], bull, cow, tries, y = 4, x = 0, i = 0;
 
     char f = '0';
 
@@ -28,6 +28,7 @@ void logic()
             tries++;
 
             // std::cout << "Enter your number\n"; //	0 -> Show answer
+
             input(number);
             if (tries % 5 == 0) {
                 y = 4;
@@ -73,6 +74,13 @@ void logic()
             if (bull == 4) {
                 break;
             }
+            i++;
+            if (i == 21) {
+                i = 0;
+                x = 0;
+                y = 4;
+                break;
+            }
         }
 
         //	Outputs answer
@@ -101,5 +109,10 @@ void logic()
         }
         clear();
         f = '0';
+        if (f == '0') {
+            i = 0;
+            x = 0;
+            y = 4;
+        }
     }
 }
