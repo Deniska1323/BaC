@@ -34,6 +34,7 @@ void Menu()
             endwin();
         } else {
             variant = '3';
+            continue;
         }
         system("clear");
     }
