@@ -13,7 +13,7 @@ You must enter the following in the terminal:
 When you touch 0 in game you can't see, what are you writting at the moment in concole.You must after touch 0 write reset ant touch "Enter".
 Concore restart and you can working normal.
 
-#Additional option
-You have option
+# Extra option
+You have option:
 "make clean" - clean all artifact build, file BaC and testing.
 "make test_run" - you open test and can see how many test was passed.
