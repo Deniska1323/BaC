@@ -7,6 +7,6 @@ The project is a logical game with a convenient and simple interface in which yo
 More in https://github.com/Deniska1323/BaC/wiki
 # How to play?
 You must enter the following in the terminal:
-1) $ git clone https://github.com/Deniska1323 && cd BaC/ && make install && make all && make run
+1) $ git clone https://github.com/Deniska1323/BaC.git && cd BaC/ && make install && make all && make run
 2) Play =)
 
