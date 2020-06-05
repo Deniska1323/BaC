@@ -14,6 +14,6 @@ When you touch 0 in game you can't see, what are you writting at the moment in c
 Concore restart and you can working normal.
 
 # Extra option
-You have option:
-"make clean" - clean all artifact build, file BaC and testing.
-"make test_run" - you open test and can see how many test was passed.
+0)You have option:
+1)"make clean" - clean all artifact build, file BaC and testing.
+2)"make test_run" - you open test and can see how many test was passed.
