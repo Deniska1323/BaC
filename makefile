@@ -39,8 +39,6 @@ build/src/logic.o: src/logic.cpp
 	clang-format -i src/logic.cpp
 	g++ -Wall -Werror -I src -c src/logic.cpp -o build/src/logic.o -lncurses $(FLAGS)
 
-format: src/input.cpp src/input.hpp src/menu.cpp src/menu.hpp src/main.cpp src/randomizer.cpp src/randomizer.hpp src/incorrect_input.cpp src/incorrect_input.hpp test/testing.cpp
-
 run:
 	bin/BaC
 
