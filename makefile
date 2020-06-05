@@ -1,4 +1,4 @@
-.PHONY: all format clean run test install
+.PHONY: all clean run test install
 
 FLAGS := -std=c++11
 
