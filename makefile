@@ -46,7 +46,7 @@ test_run:
 	 bin/testing
 
 clean:
-	rm -rf build/src/*.o build/test/*.o bin/BaC
+	rm -rf build/src/*.o build/test/*.o bin/BaC bin/testing
 
 install:
 	sudo apt-get install libncurses5-dev libncursesw5-dev
