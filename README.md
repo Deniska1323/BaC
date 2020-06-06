@@ -10,7 +10,7 @@ You must enter the following in the terminal:
 1) $ git clone https://github.com/Deniska1323/BaC.git && cd BaC/ && make install && make all && make run.
 2) Play =)
 # How to exit?
-When you touch 0 in game you can't see, what are you writting at the moment in concole.You must after touch 0 write reset ant touch "Enter".
+When you touch 0 in game you can't see, what are you writting at the moment in concole.You must after touch 0 write 'reset' ant touch "Enter".
 Concore restart and you can working normal.
 
 # Extra option
